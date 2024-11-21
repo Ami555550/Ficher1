@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e9f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .dashboard {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border-radius: 10px;
+            padding: 15px;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .card .count {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .in-progress { background-color: #7b6cf6; }
+        .in-review { background-color: #d48ad9; }
+        .on-hold { background-color: #f7b366; }
+        .completed { background-color: #6cd48a; }
+
+        .statistics {
+            margin-bottom: 20px;
+        }
+
+        .statistics h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .bar-chart {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bar {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .bar div {
+            width: 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .progress { background-color: #7b6cf6; }
+        .reviewed { background-color: #d48ad9; }
+        .complete { background-color: #6cd48a; }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer div {
+            background-color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer .increase { color: #6cd48a; }
+        .footer .decrease { color: #7b6cf6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+            <div class="summary">
+                <div class="card in-progress">
+                    <div>
+                        <p>In Progress</p>
+                        <p class="count">24</p>
+                    </div>
+                </div>
+                <div class="card in-review">
+                    <div>
+                        <p>In Review</p>
+                        <p class="count">56</p>
+                    </div>
+                </div>
+                <div class="card on-hold">
+                    <div>
+                        <p>On Hold</p>
+                        <p class="count">16</p>
+                    </div>
+                </div>
+                <div class="card completed">
+                    <div>
+                        <p>Completed</p>
+                        <p class="count">45</p>
+                    </div>
+                </div>
+            </div>
+            <div class="statistics">
+                <h2>Project Statistics</h2>
+                <div class="bar-chart">
+                    <div class="bar">
+                        <div class="progress" style="height: 50px;"></div>
+                        <div class="reviewed" style="height: 70px;"></div>
+                        <div class="complete" style="height: 30px;"></div>
+                        <p>M</p>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="height: 40px;"></div>
+                        <div class="reviewed" style="height: 60px;"></div>
+                        <div class="complete" style="height: 40px;"></div>
+                        <p>T</p>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="height: 30px;"></div>
+                        <div class="reviewed" style="height: 80px;"></div>
+                        <div class="complete" style="height: 20px;"></div>
+                        <p>W</p>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="height: 20px;"></div>
+                        <div class="reviewed" style="height: 90px;"></div>
+                        <div class="complete" style="height: 10px;"></div>
+                        <p>T</p>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="height: 70px;"></div>
+                        <div class="reviewed" style="height: 60px;"></div>
+                        <div class="complete" style="height: 50px;"></div>
+                        <p>F</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <p>Total working hour</p>
+                    <p>50:25:06 <span class="increase">↑ 34%</span></p>
+                </div>
+                <div>
+                    <p>Total task activity</p>
+                    <p>125 Task <span class="decrease">↓ 50%</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
